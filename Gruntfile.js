@@ -183,6 +183,22 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     dot: true,
+                    cwd: 'bower_components/ztree/js/',
+                    dest: '<%= yeoman.dist %>/ztree/scripts',
+                    src: [
+                        'jquery.ztree.all-3.5.js'
+                    ]
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: 'bower_components/ztree/css/zTreeStyle/',
+                    dest: '<%= yeoman.dist %>/ztree/css',
+                    src: [
+                        '{,*/}*.css', 'img/{,*/}*.{png,gif}'
+                    ]
+                }, {
+                    expand: true,
+                    dot: true,
                     cwd: 'src',
                     dest: '<%= yeoman.dist %>',
                     src: [
@@ -240,6 +256,9 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('default', [
+        /*'newer:jshint',
+        'newer:jscs',*/
+        'test',
         'build'
     ]);
 };

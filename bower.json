@@ -5,6 +5,8 @@
     "Ethan Zhao"
   ],
   "main": [
+    "dist/ztree/scripts/jquery.ztree.all-3.5.js",
+    "dist/ztree/css/zTreeStyle.css",
     "dist/beanext-ui-ztree.js"
   ],
   "ignore": [
@@ -22,13 +24,13 @@
   "version": "0.0.1",
   "dependencies": {
     "angular": "^1.4.0",
-    "ztree": "~3.5.0",
-    "oclazyload": "~1.0.9",
-    "bootstrap": "~3.3.6",
     "angular-route": "~1.4.8",
     "angular-ui-router": "~0.2.15"
   },
   "devDependencies": {
+    "oclazyload": "~1.0.9",
+    "ztree": "~3.5.0",
+    "bootstrap": "~3.3.6",
     "angular-mocks": "^1.4.0"
   },
   "moduleName": "uiztreeApp"
