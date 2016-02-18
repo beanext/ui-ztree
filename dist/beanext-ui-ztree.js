@@ -37,6 +37,9 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
                         if (scope.zTree.expand !== false) {
                             scope.zTree.tools.expandAll(true);
                         }
+                        angular.forEach(scope.zTree.tools.getNodesByParam('initSelected', true), function (node) {
+                            scope.zTree.tools.selectNode(node, 1);
+                        })
                     } else if (newValue && scope.zTree.tools) {
                         scope.zTree.tools.refresh();
                     }
