@@ -6,6 +6,7 @@
   ],
   "main": [
     "dist/ztree/scripts/jquery.ztree.all-3.5.js",
+    "dist/ztree/scripts/jquery.ztree.exhide-3.5.js",
     "dist/ztree/css/zTreeStyle.css",
     "dist/beanext-ui-ztree.js"
   ],

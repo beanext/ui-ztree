@@ -13,7 +13,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
 (function (_, $, angular, undefined) {
     angular.module('bui.ztree', []).directive('buiZtree', ['$timeout', function ($timeout) {
         return {
-            restrict: 'E',
+            restrict: 'EA',
             scope: {
                 zTree: '='
             },
@@ -31,9 +31,15 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.ex
                     element.addClass('ztree');
                 }
                 var _settings = scope.zTree.settings || {};
-                var zNodes = scope.zTree.nodes || [];
-                $timeout(function () {
-                    scope.zTree.tools = $.fn.zTree.init(element, _settings, zNodes);
+                scope.$watch('zTree.nodes', function (newValue) {
+                    if (newValue && !scope.zTree.tools) {
+                        scope.zTree.tools = $.fn.zTree.init(element, _settings, scope.zTree.nodes);
+                        if (scope.zTree.expand !== false) {
+                            scope.zTree.tools.expandAll(true);
+                        }
+                    } else if (newValue && scope.zTree.tools) {
+                        scope.zTree.tools.refresh();
+                    }
                 })
             }
         };

@@ -186,7 +186,8 @@ module.exports = function (grunt) {
                     cwd: 'bower_components/ztree/js/',
                     dest: '<%= yeoman.dist %>/ztree/scripts',
                     src: [
-                        'jquery.ztree.all-3.5.js'
+                        'jquery.ztree.all-3.5.js',
+                        'jquery.ztree.exhide-3.5.js'
                     ]
                 }, {
                     expand: true,
@@ -257,7 +258,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         /*'newer:jshint',
-        'newer:jscs',*/
+         'newer:jscs',*/
         'test',
         'build'
     ]);
