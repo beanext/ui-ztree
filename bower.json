@@ -24,15 +24,15 @@
   ],
   "version": "0.0.1",
   "dependencies": {
-    "angular": "^1.4.0",
-    "angular-route": "~1.4.8",
-    "angular-ui-router": "~0.2.15"
+    "angular": "^1.4.0"
   },
   "devDependencies": {
     "oclazyload": "~1.0.9",
     "ztree": "~3.5.0",
     "bootstrap": "~3.3.6",
-    "angular-mocks": "^1.4.0"
+    "angular-mocks": "^1.4.0",
+    "angular-route": "~1.4.8",
+    "angular-ui-router": "~0.2.15"
   },
   "moduleName": "uiztreeApp"
 }
